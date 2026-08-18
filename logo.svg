@@ -1,14 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-  <path d="M20 3 C11 3 4 10 4 20 C4 29 11 36 20 37 C19 30 19 24 22 19 C25 14 31 12 36 12 C34 6 28 3 20 3 Z" fill="url(#gradLeaf)"/>
-  <circle cx="14" cy="20" r="1.6" fill="#fff"/>
-  <circle cx="20" cy="15" r="1.6" fill="#fff"/>
-  <circle cx="20" cy="26" r="1.6" fill="#fff"/>
-  <circle cx="27" cy="20" r="1.6" fill="#fff"/>
-  <path d="M14 20 L20 15 M14 20 L20 26 M20 15 L27 20 M20 26 L27 20" stroke="#fff" stroke-width="1" opacity="0.8"/>
-  <defs>
-    <linearGradient id="gradLeaf" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1F9D66"/>
-      <stop offset="1" stop-color="#0E7C82"/>
-    </linearGradient>
-  </defs>
-</svg>
+ <svg viewBox="0 0 61 67" width="40" height="44"
+       xmlns="http://www.w3.org/2000/svg">
+
+    <path
+      d="M11 42
+         C7 32 10 22 18 16
+         C27 9 40 7 52 2
+         C53 15 50 27 42 34
+         C35 40 26 42 18 43
+         C15 44 13 44 11 42Z"
+      fill="#087A3E"/>
+
+    <path
+      d="M17 45 C20 37 25 30 34 25"
+      fill="none"
+      stroke="#fff"
+      stroke-width="1.8"
+      stroke-linecap="round"/>
+
+    <path
+      d="M17 43
+         C15 51 20 59 29 62
+         C39 65 49 60 53 51"
+      fill="none"
+      stroke="#28A745"
+      stroke-width="4"
+      stroke-linecap="round"/>
+
+    <g fill="#28A745">
+      <rect x="38" y="25" width="6" height="6" rx="1"/>
+      <rect x="43" y="33" width="5" height="5" rx="1"/>
+      <rect x="34" y="36" width="4" height="4" rx="1"/>
+      <rect x="31" y="47" width="4" height="4" rx="1"/>
+      <circle cx="39" cy="52" r="2.2"/>
+      <circle cx="47" cy="44" r="2"/>
+    </g>
+
+    <g fill="#168F45">
+      <rect x="47" y="21" width="7" height="7" rx="1"/>
+      <rect x="51" y="30" width="5" height="5" rx="1"/>
+      <rect x="40" y="43" width="7" height="7" rx="1"/>
+      <rect x="25" y="51" width="5" height="5" rx="1"/>
+      <circle cx="34" cy="54" r="1.8"/>
+    </g>
+
+    <rect x="28" y="39" width="8" height="8" rx="1"
+          fill="#20A346"/>
+  </svg>
