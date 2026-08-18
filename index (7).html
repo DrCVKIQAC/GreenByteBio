@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenByte-Bio | AI-Driven Sustainability Intelligence for Biotechnology &amp; Life Sciences</title>
+<meta name="description" content="GreenByte-Bio helps biotechnology and life-science labs measure, understand, reduce and predict the hidden digital and energy footprint of research — from genomics and AI drug discovery to cloud, HPC and microscopy.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SKIP LINK ============ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="#top" class="brand" aria-label="GreenByte-Bio home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <path d="M20 3 C11 3 4 10 4 20 C4 29 11 36 20 37 C19 30 19 24 22 19 C25 14 31 12 36 12 C34 6 28 3 20 3 Z" fill="url(#gradLeaf)"/>
+          <circle cx="14" cy="20" r="1.6" fill="#fff"/>
+          <circle cx="20" cy="15" r="1.6" fill="#fff"/>
+          <circle cx="20" cy="26" r="1.6" fill="#fff"/>
+          <circle cx="27" cy="20" r="1.6" fill="#fff"/>
+          <path d="M14 20 L20 15 M14 20 L20 26 M20 15 L27 20 M20 26 L27 20" stroke="#fff" stroke-width="1" opacity="0.8"/>
+          <defs>
+            <linearGradient id="gradLeaf" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1F9D66"/>
+              <stop offset="1" stop-color="#0E7C82"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span class="brand-text">GreenByte<span class="brand-accent">-Bio</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="#problem">The Problem</a>
+      <a href="#apply">Applications</a>
+      <a href="#engine">Engine</a>
+      <a href="#assessment">Assessment</a>
+      <a href="#industry">Industry</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-ghost btn-sm" id="industryViewBtn"><i class="fa-solid fa-building-flag"></i> Industry View</button>
+      <button class="btn btn-primary btn-sm" id="judgeModeBtn"><i class="fa-solid fa-gavel"></i> Judge Mode</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <svg class="hero-strand" viewBox="0 0 1200 600" preserveAspectRatio="none">
+      <path class="strand-path strand-1" d="M0,80 C200,180 300,0 500,100 C700,200 800,20 1000,120 C1100,170 1150,140 1200,160" />
+      <path class="strand-path strand-2" d="M0,160 C200,60 300,240 500,180 C700,120 800,300 1000,200 C1100,150 1150,180 1200,160" />
+    </svg>
+  </div>
+  <div class="section-wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><i class="fa-solid fa-dna"></i> AI-Driven Sustainability Intelligence for Biotechnology &amp; Life Sciences</p>
+      <h1>The carbon footprint of biology is now written in <span class="hl">data</span>, not just chemicals.</h1>
+      <p class="hero-sub">GreenByte-Bio makes the hidden digital and energy footprint of genomics, AI drug discovery, cloud storage, HPC and microscopy visible — so labs can measure it, understand it, and reduce it before it scales out of control.</p>
+      <p class="hero-tagline">Measure <i class="fa-solid fa-arrow-right-long"></i> Understand <i class="fa-solid fa-arrow-right-long"></i> Reduce <i class="fa-solid fa-arrow-right-long"></i> Predict</p>
+      <div class="hero-ctas">
+        <a href="#apply" class="btn btn-primary">Explore GreenByte-Bio</a>
+        <a href="#assessment" class="btn btn-secondary">Run Sustainability Assessment</a>
+      </div>
+      <button class="link-cta" id="forIndustryLink"><i class="fa-solid fa-handshake"></i> For Industry &amp; Partners</button>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card glass">
+        <div class="hero-card-top">
+          <span class="tag tag-mint">Live demo mechanic</span>
+          <span class="tag tag-outline">Illustrative</span>
+        </div>
+        <div class="gauge-mini">
+          <svg viewBox="0 0 160 100">
+            <path d="M10,90 A70,70 0 0 1 150,90" fill="none" stroke="#E4EFEA" stroke-width="14" stroke-linecap="round"/>
+            <path id="heroGaugeArc" d="M10,90 A70,70 0 0 1 150,90" fill="none" stroke="url(#gaugeGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="220" stroke-dashoffset="60"/>
+            <defs>
+              <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#12867A"/>
+                <stop offset="1" stop-color="#2F9E68"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="gauge-mini-label"><strong>72</strong><span>/100 Bio-Lab Green Score</span></div>
+        </div>
+        <ul class="hero-mini-list">
+          <li><i class="fa-solid fa-microchip"></i> Compute &amp; GPU workload</li>
+          <li><i class="fa-solid fa-database"></i> Storage &amp; data transfer</li>
+          <li><i class="fa-solid fa-microscope"></i> Imaging &amp; sequencing volume</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></div>
+</section>
+
+<!-- ============ WHY DIGITAL SUSTAINABILITY ============ -->
+<section class="section" id="why">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why It Matters</p>
+      <h2>Modern bio-research runs on electricity as much as reagents</h2>
+      <p class="section-lede">Sequencing, bioinformatics pipelines, AI/ML model training, cloud collaboration, high-performance computing and digital microscopy all consume computing resources, storage, network capacity and — ultimately — energy. Most sustainability programs never look here.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><i class="fa-solid fa-server"></i><h3>Compute-heavy pipelines</h3><p>Genome assembly, alignment and molecular simulation can run for hours or days on shared clusters.</p></div>
+      <div class="why-card"><i class="fa-solid fa-brain"></i><h3>AI/ML drug discovery</h3><p>Training and fine-tuning models for target discovery is one of the most energy-intensive workloads in a lab.</p></div>
+      <div class="why-card"><i class="fa-solid fa-cloud-arrow-up"></i><h3>Ever-growing datasets</h3><p>Raw sequencing files, image stacks and derived data accumulate in cloud and local storage indefinitely.</p></div>
+      <div class="why-card"><i class="fa-solid fa-people-group"></i><h3>Distributed collaboration</h3><p>Multi-site research teams transfer large datasets repeatedly across networks and institutions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE PROBLEM ============ -->
+<section class="section section-tint" id="problem">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Problem</p>
+      <h2>The Hidden Footprint of Modern Bio-Research</h2>
+      <p class="section-lede">Every digital step in a research workflow consumes computational and energy resources — quietly, cumulatively, and almost never measured.</p>
+    </div>
+
+    <div class="workflow-diagram" role="img" aria-label="Biological data flows through sequencing, bioinformatics, AI and ML, cloud and HPC, storage, collaboration, to research output">
+      <div class="wf-step"><i class="fa-solid fa-dna"></i><span>Biological Data</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step"><i class="fa-solid fa-flask-vial"></i><span>Sequencing</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step"><i class="fa-solid fa-diagram-project"></i><span>Bioinformatics</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step"><i class="fa-solid fa-robot"></i><span>AI / ML</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step"><i class="fa-solid fa-cloud"></i><span>Cloud / HPC</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step"><i class="fa-solid fa-database"></i><span>Storage</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step"><i class="fa-solid fa-people-arrows"></i><span>Collaboration</span></div>
+      <div class="wf-arrow"></div>
+      <div class="wf-step wf-final"><i class="fa-solid fa-chart-line"></i><span>Research Output</span></div>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3><i class="fa-solid fa-flask"></i> Physical Laboratory Footprint</h3>
+        <ul>
+          <li>Electricity for equipment</li>
+          <li>Refrigeration &amp; cold storage</li>
+          <li>Chemicals &amp; reagents</li>
+          <li>Water usage</li>
+          <li>Consumables &amp; plasticware</li>
+          <li>Biological waste</li>
+        </ul>
+        <span class="compare-tag">Well understood, widely measured</span>
+      </div>
+      <div class="compare-vs" aria-hidden="true"><span>VS</span></div>
+      <div class="compare-card compare-card-accent">
+        <h3><i class="fa-solid fa-microchip"></i> Digital Laboratory Footprint</h3>
+        <ul>
+          <li>Compute &amp; GPU cycles</li>
+          <li>Cloud &amp; HPC energy draw</li>
+          <li>Data storage &amp; redundancy</li>
+          <li>Network &amp; data transfer</li>
+          <li>Model training &amp; inference</li>
+          <li>Imaging &amp; pipeline reruns</li>
+        </ul>
+        <span class="compare-tag compare-tag-accent">Largely invisible — GreenByte-Bio's focus</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHERE APPLIES ============ -->
+<section class="section" id="apply">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Where GreenByte-Bio Applies</p>
+      <h2>Every data-intensive corner of a bio-research pipeline</h2>
+      <p class="section-lede">Select a card to see its typical digital-resource drivers and a sustainability action a lab can take.</p>
+    </div>
+    <div class="usecase-grid" id="usecaseGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ENGINE / ARCHITECTURE ============ -->
+<section class="section section-tint" id="engine">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">GreenByte-Bio Architecture</p>
+      <h2>The Sustainability Engine</h2>
+      <p class="section-lede">One continuous pipeline turns raw research activity into an actionable, forward-looking sustainability picture.</p>
+    </div>
+    <div class="engine-diagram">
+      <div class="engine-node"><div class="engine-icon"><i class="fa-solid fa-file-import"></i></div><h4>Input</h4><p>Research activity, data &amp; systems</p></div>
+      <div class="engine-line"></div>
+      <div class="engine-node"><div class="engine-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><h4>Activity Analysis</h4><p>Compute, storage, network &amp; resource patterns</p></div>
+      <div class="engine-line"></div>
+      <div class="engine-node"><div class="engine-icon"><i class="fa-solid fa-bolt"></i></div><h4>Energy &amp; Carbon Estimation</h4><p>Indicative energy / carbon estimate</p></div>
+      <div class="engine-line"></div>
+      <div class="engine-node"><div class="engine-icon"><i class="fa-solid fa-gauge-high"></i></div><h4>Green Score</h4><p>Sustainability performance score</p></div>
+      <div class="engine-line"></div>
+      <div class="engine-node"><div class="engine-icon"><i class="fa-solid fa-leaf"></i></div><h4>AI Green Coach</h4><p>Personalised recommendations</p></div>
+      <div class="engine-line"></div>
+      <div class="engine-node"><div class="engine-icon"><i class="fa-solid fa-code-compare"></i></div><h4>What-If Simulator</h4><p>Current vs. greener workflow</p></div>
+      <div class="engine-line"></div>
+      <div class="engine-node engine-node-final"><div class="engine-icon"><i class="fa-solid fa-chart-line"></i></div><h4>Predict</h4><p>Future sustainability scenarios</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE ASSESSMENT ============ -->
+<section class="section" id="assessment">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Try It</p>
+      <h2>Bio-Lab Sustainability Assessment</h2>
+      <p class="section-lede">Pick a workflow, enter a few numbers, and see your indicative Green Score in under a minute. All results are illustrative estimates based on configurable assumptions.</p>
+    </div>
+
+    <div class="assessment-panel">
+      <div class="assessment-inputs">
+        <div class="scenario-row">
+          <label class="field-label" for="scenarioSelect">Demo scenario</label>
+          <div class="scenario-buttons" id="scenarioButtons">
+            <button data-scenario="genomics" class="scenario-btn active"><i class="fa-solid fa-dna"></i> Genomics Lab</button>
+            <button data-scenario="ai" class="scenario-btn"><i class="fa-solid fa-robot"></i> AI Drug Discovery</button>
+            <button data-scenario="microscopy" class="scenario-btn"><i class="fa-solid fa-microscope"></i> Digital Microscopy</button>
+            <button data-scenario="cloud" class="scenario-btn"><i class="fa-solid fa-cloud"></i> Cloud Research Lab</button>
+          </div>
+        </div>
+
+        <form id="assessmentForm" class="assess-form">
+          <div class="field-grid">
+            <div class="field">
+              <label for="researchers">Researchers involved</label>
+              <input type="number" id="researchers" min="1" max="200" value="6">
+            </div>
+            <div class="field">
+              <label for="frequency">Workflow runs / month</label>
+              <input type="number" id="frequency" min="1" max="200" value="8">
+            </div>
+            <div class="field">
+              <label for="datasetSize">Dataset size per run (GB)</label>
+              <input type="number" id="datasetSize" min="0" max="20000" value="150">
+            </div>
+            <div class="field">
+              <label for="computeHours">CPU compute hours / run</label>
+              <input type="number" id="computeHours" min="0" max="2000" value="40">
+            </div>
+            <div class="field">
+              <label for="gpuHours">GPU hours / run</label>
+              <input type="number" id="gpuHours" min="0" max="2000" value="10">
+            </div>
+            <div class="field">
+              <label for="storage">Standing storage (TB)</label>
+              <input type="number" id="storage" min="0" max="2000" value="8">
+            </div>
+            <div class="field">
+              <label for="transfer">Data transfer / run (GB)</label>
+              <input type="number" id="transfer" min="0" max="10000" value="60">
+            </div>
+            <div class="field">
+              <label for="imaging">Imaging data / run (GB)</label>
+              <input type="number" id="imaging" min="0" max="20000" value="0">
+            </div>
+          </div>
+          <div class="assess-actions">
+            <button type="button" class="btn btn-primary" id="runAssessmentBtn"><i class="fa-solid fa-play"></i> Run Assessment</button>
+            <button type="button" class="btn btn-ghost" id="demoDataBtn"><i class="fa-solid fa-vial-circle-check"></i> Load Demo Data</button>
+            <button type="button" class="btn btn-ghost" id="resetAssessBtn"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            <button type="button" class="btn btn-ghost" id="printReportBtn"><i class="fa-solid fa-file-arrow-down"></i> Green Report</button>
+          </div>
+        </form>
+        <p class="disclaimer-inline"><i class="fa-solid fa-circle-info"></i> Indicative / estimated values based on configurable assumptions — not direct emissions measurement.</p>
+      </div>
+
+      <div class="assessment-results" id="assessmentResults">
+        <div class="score-card glass">
+          <div class="score-gauge-wrap">
+            <svg viewBox="0 0 200 120" class="score-gauge">
+              <path d="M15,110 A85,85 0 0 1 185,110" fill="none" stroke="#E4EFEA" stroke-width="16" stroke-linecap="round"/>
+              <path id="scoreArc" d="M15,110 A85,85 0 0 1 185,110" fill="none" stroke="url(#scoreGrad)" stroke-width="16" stroke-linecap="round" stroke-dasharray="267" stroke-dashoffset="267"/>
+              <defs>
+                <linearGradient id="scoreGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#E4572E"/><stop offset="0.5" stop-color="#F2C230"/><stop offset="1" stop-color="#2F9E68"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="score-gauge-label">
+              <strong id="greenScoreValue">0</strong><span>/ 100</span>
+              <p id="greenScoreVerdict">Bio-Lab Green Score</p>
+            </div>
+          </div>
+          <div class="score-dims" id="scoreDims"></div>
+        </div>
+
+        <div class="breakdown-card glass">
+          <h3><i class="fa-solid fa-chart-pie"></i> Digital Footprint Breakdown</h3>
+          <canvas id="breakdownChart" height="220"></canvas>
+          <p class="stat-line">Estimated monthly energy: <strong id="kwhValue">0</strong> kWh &middot; Estimated CO2e: <strong id="co2Value">0</strong> kg <span class="tag tag-outline tag-xs">illustrative</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI GREEN COACH -->
+    <div class="coach-panel glass" id="coachPanel">
+      <h3><i class="fa-solid fa-comments"></i> AI Green Coach</h3>
+      <p class="coach-sub">Rule-based recommendation engine, presented as a conversational assistant. Recommendations update with your inputs.</p>
+      <ul class="coach-list" id="coachList"></ul>
+    </div>
+
+    <!-- WHAT-IF SIMULATOR -->
+    <div class="whatif-panel" id="whatif">
+      <div class="section-head section-head-left">
+        <p class="eyebrow">Scenario Planning</p>
+        <h3>What-If Simulator: Current vs. Greener Workflow</h3>
+        <p class="section-lede">Compare your current workflow footprint against an optimised, greener configuration. Figures are scenario estimates, not guarantees.</p>
+      </div>
+      <div class="whatif-grid">
+        <div class="whatif-sliders glass">
+          <div class="whatif-slider">
+            <label for="optGpu">GPU / compute optimisation <span id="optGpuVal">30%</span></label>
+            <input type="range" id="optGpu" min="0" max="60" value="30">
+          </div>
+          <div class="whatif-slider">
+            <label for="optStorage">Storage deduplication <span id="optStorageVal">25%</span></label>
+            <input type="range" id="optStorage" min="0" max="60" value="25">
+          </div>
+          <div class="whatif-slider">
+            <label for="optTransfer">Data transfer optimisation <span id="optTransferVal">35%</span></label>
+            <input type="range" id="optTransfer" min="0" max="60" value="35">
+          </div>
+          <div class="whatif-slider">
+            <label for="optImaging">Imaging pipeline optimisation <span id="optImagingVal">20%</span></label>
+            <input type="range" id="optImaging" min="0" max="60" value="20">
+          </div>
+        </div>
+        <div class="whatif-results glass">
+          <canvas id="whatifChart" height="220"></canvas>
+          <div class="whatif-stats">
+            <div><span id="whatifReduction">0%</span><small>Footprint reduction</small></div>
+            <div><span id="whatifSavedMonthly">0 kWh</span><small>Est. monthly energy saved</small></div>
+            <div><span id="whatifSavedAnnual">0 kWh</span><small>Est. annualised savings</small></div>
+          </div>
+          <p class="disclaimer-inline"><i class="fa-solid fa-circle-info"></i> Scenario-based estimate for demonstration purposes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLLECTIVE IMPACT ============ -->
+<section class="section section-tint" id="collective">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Scale Effect</p>
+      <h2>What if every lab optimised its digital workflow?</h2>
+      <p class="section-lede">Small per-lab improvements compound quickly. Drag the slider to see illustrative collective impact based on the What-If savings above.</p>
+    </div>
+    <div class="collective-panel glass">
+      <div class="collective-slider-row">
+        <label for="labCountSlider">Number of labs: <strong id="labCountLabel">100</strong></label>
+        <input type="range" id="labCountSlider" min="0" max="2" step="1" value="1">
+        <div class="slider-scale"><span>10</span><span>100</span><span>1,000</span></div>
+      </div>
+      <div class="collective-stats">
+        <div class="collective-stat"><i class="fa-solid fa-bolt"></i><strong id="collectiveKwh">0</strong><span>kWh saved / month (indicative)</span></div>
+        <div class="collective-stat"><i class="fa-solid fa-cloud"></i><strong id="collectiveCo2">0</strong><span>kg CO2e avoided / month (indicative)</span></div>
+        <div class="collective-stat"><i class="fa-solid fa-seedling"></i><strong id="collectiveTrees">0</strong><span>tree-seedlings/yr equivalent (illustrative)</span></div>
+      </div>
+      <p class="disclaimer-inline"><i class="fa-solid fa-circle-info"></i> Aggregated from per-lab What-If estimates using standard illustrative conversion factors. Not a scientific emissions audit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRY APPLICATIONS ============ -->
+<section class="section" id="industry">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">For Industry</p>
+      <h2>From Research Prototype to Enterprise Platform</h2>
+      <p class="section-lede">GreenByte-Bio is designed to extend from a single lab dashboard into an enterprise-grade sustainability layer across the biotechnology value chain.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card"><i class="fa-solid fa-industry"></i><h4>Biotechnology Companies</h4><p>Digital sustainability visibility across R&amp;D workflows.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-pills"></i><h4>Pharmaceutical Companies</h4><p>Sustainable AI/ML and computational drug discovery.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-building-columns"></i><h4>Research Institutions</h4><p>Bio-lab sustainability dashboards across departments.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-graduation-cap"></i><h4>Universities</h4><p>Green research campuses and student-facing awareness tools.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-vial-circle-check"></i><h4>CROs &amp; Genomics Companies</h4><p>Sustainable computational pipelines at scale.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-server"></i><h4>Cloud / HPC Providers</h4><p>Resource-aware biotechnology computing offerings.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-leaf"></i><h4>ESG &amp; Sustainability Teams</h4><p>Digital sustainability intelligence for reporting.</p></div>
+      <div class="industry-card"><i class="fa-solid fa-handshake-angle"></i><h4>Technology Partners</h4><p>Embed GreenByte-Bio scoring via API into existing platforms.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT ECOSYSTEM ============ -->
+<section class="section section-tint" id="ecosystem">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Product Ecosystem</p>
+      <h2>GreenByte-Bio Modules</h2>
+      <p class="section-lede">This hackathon build demonstrates the core mechanics. The full platform vision extends into focused modules across the research and enterprise stack.</p>
+    </div>
+    <div class="ecosystem-grid">
+      <div class="eco-card eco-available"><span class="eco-badge eco-badge-live"><i class="fa-solid fa-circle-check"></i> In Hackathon MVP</span><h4>GreenByte-Bio Lab</h4><p>Research-lab sustainability assessment, Green Score &amp; AI Coach.</p></div>
+      <div class="eco-card eco-available"><span class="eco-badge eco-badge-live"><i class="fa-solid fa-circle-check"></i> In Hackathon MVP</span><h4>GreenByte-Bio What-If</h4><p>Scenario and decision simulator with collective impact view.</p></div>
+      <div class="eco-card"><span class="eco-badge"><i class="fa-solid fa-road"></i> Future Module</span><h4>GreenByte-Bio AI</h4><p>Deep sustainable AI/ML workload analysis and model-level efficiency scoring.</p></div>
+      <div class="eco-card"><span class="eco-badge"><i class="fa-solid fa-road"></i> Future Module</span><h4>GreenByte-Bio Cloud</h4><p>Cloud and storage sustainability advisor with provider-level comparisons.</p></div>
+      <div class="eco-card"><span class="eco-badge"><i class="fa-solid fa-road"></i> Future Module</span><h4>GreenByte-Bio HPC</h4><p>Computational resource efficiency for shared clusters.</p></div>
+      <div class="eco-card"><span class="eco-badge"><i class="fa-solid fa-road"></i> Future Module</span><h4>GreenByte-Bio ESG</h4><p>Enterprise digital sustainability dashboard for reporting teams.</p></div>
+      <div class="eco-card"><span class="eco-badge"><i class="fa-solid fa-road"></i> Future Module</span><h4>GreenByte-Bio API</h4><p>Carbon/resource estimation services embeddable in third-party software.</p></div>
+      <div class="eco-card"><span class="eco-badge"><i class="fa-solid fa-road"></i> Future Module</span><h4>GreenByte-Bio Score</h4><p>Standardised, portable sustainability scoring for research infrastructure.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS MODEL ============ -->
+<section class="section" id="business">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Startup Potential</p>
+      <h2>From Hackathon Idea to Scalable Startup</h2>
+    </div>
+    <div class="psvc-grid">
+      <div class="psvc-card"><h4>Problem</h4><p>Hidden digital footprint in data-intensive biological research.</p></div>
+      <div class="psvc-card"><h4>Solution</h4><p>GreenByte-Bio sustainability intelligence — measurement, coaching and simulation.</p></div>
+      <div class="psvc-card"><h4>Customers</h4><p>Labs, universities, biotech, pharma, CROs, research centres and enterprises.</p></div>
+      <div class="psvc-card"><h4>Value</h4><p>Lower resource waste, better sustainability visibility, data-driven decisions.</p></div>
+      <div class="psvc-card"><h4>Scale</h4><p>Individual lab &rarr; institution &rarr; enterprise &rarr; global research ecosystem.</p></div>
+    </div>
+    <div class="model-tags">
+      <span class="tag tag-outline">Potential Business Model</span>
+      <div class="model-tag-list">
+        <span>SaaS subscription</span><span>Institutional licensing</span><span>Enterprise licensing</span>
+        <span>Sustainability assessment services</span><span>API usage</span><span>Green research certification</span>
+        <span>Analytics dashboards</span><span>Consulting &amp; integration</span><span>Premium AI analytics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY GREENBYTE-BIO / COMPARISON ============ -->
+<section class="section section-tint" id="why-us">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Positioning</p>
+      <h2>Why GreenByte-Bio?</h2>
+      <p class="section-lede">GreenByte-Bio extends sustainability assessment beyond the physical laboratory into the digital infrastructure powering modern biological research.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead><tr><th>Traditional Lab Sustainability</th><th>GreenByte-Bio</th></tr></thead>
+        <tbody>
+          <tr><td>Physical resources only</td><td>Physical + digital resources</td></tr>
+          <tr><td>Electricity awareness</td><td>Digital workflow awareness</td></tr>
+          <tr><td>Equipment focus</td><td>Research workflow focus</td></tr>
+          <tr><td>Periodic assessment</td><td>Interactive, on-demand assessment</td></tr>
+          <tr><td>Static reporting</td><td>What-If simulation</td></tr>
+          <tr><td>General sustainability</td><td>Bio-research specific sustainability</td></tr>
+          <tr><td>Manual insights</td><td>AI-assisted recommendations</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SDG / POLICY ============ -->
+<section class="section" id="sdg">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Alignment</p>
+      <h2>Conceptually Aligned With Sustainability Directions</h2>
+      <p class="section-lede">GreenByte-Bio's approach is conceptually aligned with — not certified against — the following directions. No legal or regulatory compliance is claimed.</p>
+    </div>
+    <div class="sdg-grid">
+      <div class="sdg-card"><i class="fa-solid fa-om"></i><h4>Mission LiFE</h4><p>Encouraging mindful, low-impact use of digital resources in research.</p></div>
+      <div class="sdg-card"><i class="fa-solid fa-chart-line"></i><h4>Low-Carbon Development</h4><p>Supporting India's broader low-carbon growth direction through resource-aware computing.</p></div>
+      <div class="sdg-card"><i class="fa-solid fa-plug-circle-bolt"></i><h4>Energy Conservation</h4><p>Highlighting energy-intensive digital activity for reduction.</p></div>
+      <div class="sdg-card"><i class="fa-solid fa-recycle"></i><h4>E-Waste &amp; Data Lifecycle</h4><p>Encouraging deduplication, archival and lifecycle management of research data.</p></div>
+      <div class="sdg-card"><i class="fa-solid fa-server"></i><h4>Green Cloud &amp; Data-Centre Practice</h4><p>Raising awareness of cloud/HPC resource efficiency.</p></div>
+      <div class="sdg-card"><i class="fa-solid fa-industry"></i><h4>SDG 9 / 12 / 13</h4><p>Industry &amp; infrastructure, responsible consumption, and climate action.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="section section-tint" id="roadmap">
+  <div class="section-wrap">
+    <div class="section-head">
+      <p class="eyebrow">Growth Path</p>
+      <h2>Lab &rarr; Institution &rarr; Enterprise &rarr; Global Research Ecosystem</h2>
+    </div>
+    <div class="roadmap-track">
+      <div class="roadmap-step"><span class="rm-num">01</span><h4>Single Lab</h4><p>Assessment, Green Score, AI Coach for one research group.</p></div>
+      <div class="roadmap-step"><span class="rm-num">02</span><h4>Institution</h4><p>Department and campus-level dashboards and benchmarking.</p></div>
+      <div class="roadmap-step"><span class="rm-num">03</span><h4>Enterprise</h4><p>Biotech / pharma-wide ESG integration and API access.</p></div>
+      <div class="roadmap-step"><span class="rm-num">04</span><h4>Global Research Ecosystem</h4><p>Cross-institution benchmarking and a shared Green Research standard.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESPONSIBLE TECH NOTICE ============ -->
+<section class="section" id="transparency">
+  <div class="section-wrap">
+    <div class="transparency-box glass">
+      <i class="fa-solid fa-shield-halved"></i>
+      <p><strong>Data Transparency Notice.</strong> GreenByte-Bio provides indicative sustainability estimates based on user-provided activity data and configurable assumptions. The hackathon prototype does not directly measure electricity consumption or actual carbon emissions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="section closing-section">
+  <div class="section-wrap closing-wrap">
+    <p class="eyebrow">From invisible digital footprint to measurable sustainable action</p>
+    <h2 class="closing-title">GreenByte<span class="brand-accent">-Bio</span></h2>
+    <p class="closing-tagline">Measure &bull; Understand &bull; Reduce &bull; Predict</p>
+    <p class="closing-sub">Making modern bio-research greener, one Bio-Byte at a time.</p>
+    <div class="closing-pills">
+      <span>Hackathon Prototype</span><span>Sustainable Bio-Innovation</span><span>Startup Readiness</span>
+    </div>
+    <div class="hero-ctas closing-ctas">
+      <a href="#assessment" class="btn btn-primary">Run Sustainability Assessment</a>
+      <button class="btn btn-secondary" id="closingPartnerBtn">Explore Partnership Potential</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="section-wrap footer-grid">
+    <div class="footer-brand">
+      <span class="brand-text">GreenByte<span class="brand-accent">-Bio</span></span>
+      <p>AI-Driven Sustainability Intelligence for Biotechnology &amp; Life Sciences.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Platform</h5>
+      <a href="#apply">Applications</a><a href="#engine">Architecture</a><a href="#assessment">Assessment</a><a href="#ecosystem">Ecosystem</a>
+    </div>
+    <div class="footer-col">
+      <h5>For</h5>
+      <a href="#industry">Industry</a><a href="#business">Startups &amp; Investors</a><a href="#sdg">Policy &amp; SDG</a>
+    </div>
+    <div class="footer-col">
+      <h5>About the Concept</h5>
+      <p class="footer-attrib">Concept &amp; Development:<br><strong>Dr C V Krishnaveni</strong><br>Lecturer &amp; Head, Department of Computer Science<br>SKR &amp; SKR Government College for Women (Autonomous), Kadapa, Andhra Pradesh, India</p>
+      <p class="footer-event">Hackathon on Sustainable Bio-Innovation Ideas &ndash; Phase 2, organised by EXCELR with Acharya Nagarjuna University, Guntur. Sponsored by RUSA 2.0, ANU.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Dr C V Krishnaveni. GreenByte-Bio. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ JUDGE MODE OVERLAY ============ -->
+<div class="overlay" id="judgeOverlay" role="dialog" aria-modal="true" aria-label="Judge presentation mode">
+  <div class="overlay-inner">
+    <button class="overlay-close" id="judgeCloseBtn" aria-label="Close judge mode"><i class="fa-solid fa-xmark"></i></button>
+    <div class="overlay-progress"><div class="overlay-progress-bar" id="judgeProgress"></div></div>
+    <div class="overlay-slides" id="judgeSlides"></div>
+    <div class="overlay-nav">
+      <button class="btn btn-ghost" id="judgePrevBtn"><i class="fa-solid fa-arrow-left"></i> Prev</button>
+      <span id="judgeStepLabel">1 / 10</span>
+      <button class="btn btn-primary" id="judgeNextBtn">Next <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INDUSTRY VIEW OVERLAY ============ -->
+<div class="overlay" id="industryOverlay" role="dialog" aria-modal="true" aria-label="Industry view">
+  <div class="overlay-inner overlay-inner-wide">
+    <button class="overlay-close" id="industryCloseBtn" aria-label="Close industry view"><i class="fa-solid fa-xmark"></i></button>
+    <div class="industry-view-content">
+      <p class="eyebrow">Industry View</p>
+      <h2>GreenByte-Bio for Decision-Makers</h2>
+      <div class="ceo-grid">
+        <div class="ceo-block"><h4><i class="fa-solid fa-bullseye"></i> Business Problem</h4><p>Data-intensive biological research consumes growing amounts of compute, storage and network resources — a digital footprint most sustainability programmes never track.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-gem"></i> Product Value</h4><p>Turns invisible digital resource use into a measurable, actionable score with concrete recommendations and scenario planning.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-users"></i> Target Customers</h4><p>Biotech &amp; pharma R&amp;D, CROs, genomics companies, universities, cloud/HPC providers, ESG teams.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-layer-group"></i> Enterprise Applications</h4><p>Lab dashboards, institutional benchmarking, and enterprise-wide ESG digital sustainability reporting.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-arrow-up-right-dots"></i> Scalability</h4><p>Architecture scales from a single lab to institution-wide and enterprise-wide deployments.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-plug"></i> API Potential</h4><p>Carbon/resource estimation logic can be exposed as an API for third-party platforms.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-leaf"></i> ESG Opportunity</h4><p>Fills a specific, underserved gap in enterprise ESG reporting: digital R&amp;D infrastructure.</p></div>
+        <div class="ceo-block"><h4><i class="fa-solid fa-hands-holding-circle"></i> Partnership Opportunities</h4><p>Cloud/HPC providers, genomics platforms, ESG software vendors, and university technology offices.</p></div>
+      </div>
+      <div class="ceo-cta">
+        <button class="btn btn-primary" id="requestDemoBtn"><i class="fa-solid fa-paper-plane"></i> Request a Demo</button>
+        <p class="ceo-cta-note">Opens a prototype outreach message. No data is transmitted automatically.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
